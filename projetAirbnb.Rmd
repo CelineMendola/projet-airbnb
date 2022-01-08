@@ -2,6 +2,7 @@
 title: "Analyse de données sur les listings Airbnb à Paris"
 author: "Céline Mendola"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -15,6 +16,7 @@ library("data.table")
 library('R.utils')
 library("tidyverse")
 library(htmlwidgets)
+library(rgdal)
 
 data_listings <- data.table::fread("http://data.insideairbnb.com/france/ile-de-france/paris/2021-10-09/data/listings.csv.gz",encoding="UTF-8")
 data_calendar<- data.table::fread("http://data.insideairbnb.com/france/ile-de-france/paris/2021-10-09/data/calendar.csv.gz",encoding="UTF-8")
